@@ -1,0 +1,145 @@
+
+:root {
+  --white: #ffffff;
+  --off-white: #e5e5e5;
+  --transp-white-1: rgba(255, 255, 255, 0.25);
+  --transp-white-2: rgba(255, 255, 255, 0.18);
+  --blue-1: #62b8f5;
+  --blue-2: #4475ef;
+  --shadow: rgba(3, 46, 87, 0.2);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-image: url('https://images.pexels.com/photos/3008509/pexels-photo-3008509.jpeg?auto=compress&cs=tinysrgb&w=1600');
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+}
+
+h1 {
+  text-align: center;
+  color: rgb(5, 41, 51);
+  margin-bottom: 1.5rem;
+}
+
+h2 {
+  font-size: 2.2rem;
+}
+
+/* Container */
+.container {
+  width: 50%;
+  margin: 5rem auto;
+  padding: 2rem;
+  background: var(--transp-white-2);
+  backdrop-filter: blur(12px);
+  border-radius: 12px;
+  border: 1px solid var(--transp-white-1);
+  color: rgb(5, 41, 51);
+}
+
+/* Form */
+form {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+}
+
+input {
+  padding: 0.7rem 1rem;
+  border-radius: 10px;
+  border: 1px solid var(--white);
+  outline: none;
+  background: transparent;
+}
+
+button {
+  padding: 0.7rem 1.5rem;
+  border-radius: 10px;
+  border: 1px solid var(--blue-2);
+  background: transparent;
+  color: var(--blue-2);
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+button:hover {
+  background: rgb(5, 41, 51);
+  color: #fff;
+}
+
+/* Weather card */
+.weather {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.left,
+.right {
+  flex: 1;
+  padding: 1.5rem;
+  background: var(--transp-white-2);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+}
+
+.left h3 {
+  margin-top: 0.5rem;
+  letter-spacing: 1px;
+}
+
+.right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon img {
+  width: 90px;
+}
+
+/* Condition */
+.condition {
+  margin-top: 1.5rem;
+  font-size: 1.1rem;
+}
+
+/* Responsive */
+@media (max-width: 1000px) {
+  .container {
+    width: 80%;
+  }
+}
+
+@media (max-width: 700px) {
+  .container {
+    width: 90%;
+    margin: 3rem auto;
+  }
+
+  form {
+    grid-template-columns: 1fr;
+  }
+
+  .weather {
+    flex-direction: column;
+  }
+}
+
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro:200'); */
+
+body {
+  background-image: url('https://images.pexels.com/photos/3008509/pexels-photo-3008509.jpeg?auto=compress&cs=tinysrgb&w=1600');
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+}
