@@ -17,18 +17,23 @@
       rel="stylesheet"
     />
   </head>
-
   <body>
+<!--    {% if exception_occured %}-->
+<!--        style="background-image: url('https://images.pexels.com/photos/3008509/pexels-photo-3008509.jpeg?auto=compress&cs=tinysrgb&w=1600');"-->
+<!--    {% else %}-->
+<!--        style="background-image:url('{{ image_url }}');"-->
+<!--    {% endif %}-->
+
     <div class="container">
       <h1>Weather App</h1>
 
-      <form method="POST">
+    <form method="POST">
         {% csrf_token %}
         <input type="text" name="city" placeholder="Enter city" />
         <button type="submit">Search</button>
-      </form>
+    </form>
 
-      <div class="weather">
+    <div class="weather">
         <div class="left">
           <h2>{{ temp }}&#176; C</h2>
           <h3>{{ city }}</h3>
@@ -52,5 +57,15 @@
         <p>{{ day }}</p>
       </div>
     </div>
+
+  {% if exception_occured %}
+  <script>
+    window.onload = function(){
+      alert("City informationis not available to our API");
+    }
+  </script>
+  {% endif %}
+
+
   </body>
 </html>
