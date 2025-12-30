@@ -2,6 +2,8 @@ from django.shortcuts import render
 from django.contrib import messages
 import requests
 import datetime
+import os
+
 # Create your views here.
 def home(request):
      if 'city' in request.POST:
@@ -9,10 +11,10 @@ def home(request):
      else:
           city = 'kathmandu'
 
-     url = f'https://api.openweathermap.org/data/2.5/weather?q={city}&appid=a219d17523ea8a1fcb23e6c3d101a93a'
+     url = f'https://api.openweathermap.org/data/2.5/weather?q={city}&appid={os.getenv("OPENWEATHER_API_KEY")}'
      params = {'units': 'metric'}
-     API_key = 'AIzaSyCK67gNylegyEsr5vYfBoKjDCfTupMHAOc'
-     SEARCH_ENGINE_ID = '93f15fb4268234ff4'
+     API_key = os.getenv('GOOGLE_API_KEY')
+     SEARCH_ENGINE_ID = os.getenv('SEARCH_ENGINE_ID')
 
      query = city + "1920*1080"
      page = 1
