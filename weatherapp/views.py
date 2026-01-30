@@ -24,8 +24,8 @@ def home(request):
 
      data = requests.get(city_url).json()
      count = 1
-     search_items = data.get("items")
-     image_url = search_items[1]['link']
+     search_items = data.get("items", [])
+     image_url = search_items[0]['link'] if search_items else None
 
      try:
 
